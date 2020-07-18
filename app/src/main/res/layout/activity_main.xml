@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffb766"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_margin="1dp"
+    android:padding="20dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.7"
+                >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play With Dice"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/diceSelect"
+            android:checkedButton="@id/dice6"
+            >
+
+        <RadioButton
+            android:id="@+id/dice4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 Side Dice"
+            />
+
+        <RadioButton
+            android:id="@+id/dice6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6 Side Dice"
+            />
+
+        <RadioButton
+            android:id="@+id/dice8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8 Side Dice"
+            />
+
+        <RadioButton
+            android:id="@+id/dice10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10 Side Dice"
+            />
+        <RadioButton
+            android:id="@+id/dice12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12 Side Dice"
+            />
+
+        <RadioButton
+            android:id="@+id/dice20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20 Side Dice"
+            />
+            <RadioButton
+                android:id="@+id/diceCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customise Dice"
+                />
+
+
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customise The Sides Of Dice Upto 25\nEnter Number of Sides"
+            android:id="@+id/customiseDice"
+            android:visibility="gone"
+            android:inputType="phone"
+            android:digits="0123456789"
+            />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Roll Dice"
+                android:onClick="rollDice"
+                android:id="@+id/rollDice"
+                />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom Dice Roll"
+            android:id="@+id/rollCustomDice"
+            android:visibility="gone"
+            />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="170dp"
+                >
+               <RadioGroup
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:checkedButton="@id/once"
+                   android:id="@+id/timesDiceRoll"
+
+                   >
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/once"
+                       android:text="Once"
+                       android:background="@android:color/transparent"
+                       />
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@android:color/transparent"
+                       android:id="@+id/twice"
+                       android:text="Twice"
+                       />
+
+               </RadioGroup>
+
+            </LinearLayout>
+     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+
+            >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/showDiceImage"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/diceOne"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/showDiceImageTwice"
+        android:visibility="gone"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/diceTwo"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
